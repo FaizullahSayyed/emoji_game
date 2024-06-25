@@ -1,0 +1,40 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+  height: 60px;
+  background-color: #ffffff33;
+  opacity: 0.7;
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 1px 1px gray;
+}
+
+.game-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji-game-name-image-container {
+  display: flex;
+}
+
+.emoji-game-image-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.emoji-image {
+  width: 30px;
+}
+
+.score-container {
+  display: flex;
+}
+
+.score,
+.top-score {
+  padding-right: 30px;
+}
