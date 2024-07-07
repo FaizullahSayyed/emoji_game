@@ -1,0 +1,22 @@
+/* Write your code here. */
+.bg-container {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-container {
+  background-image: linear-gradient(to left, #9796f0, #fbc7d4);
+  height: 100vh;
+  width: 75vw;
+}
+
+.emoji-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
