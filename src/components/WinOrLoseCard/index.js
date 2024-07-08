@@ -1,11 +1,7 @@
 import './index.css'
 
 const WinOrLoseCard = props => {
-  const {score, topScore, resetGame, updateTopScore, win} = props
-
-  if (score > topScore) {
-    updateTopScore(score)
-  }
+  const {score, resetGame, win} = props
 
   const onClickFunction = () => resetGame(score)
 
