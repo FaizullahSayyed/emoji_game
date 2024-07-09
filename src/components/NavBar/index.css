@@ -34,10 +34,13 @@
   display: flex;
 }
 
+<<<<<<< HEAD
 .hidden {
   display: none;
 }
 
+=======
+>>>>>>> c1d53d5d0a89806364ba999298080a557c429e3c
 .score,
 .top-score {
   padding-right: 30px;

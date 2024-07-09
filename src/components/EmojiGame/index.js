@@ -25,8 +25,11 @@ class EmojiGame extends Component {
     score: 0,
     topScore: 0,
     clickedEmojisIdList: [],
+<<<<<<< HEAD
     winning: true,
     win: false,
+=======
+>>>>>>> c1d53d5d0a89806364ba999298080a557c429e3c
   }
 
   shuffledEmojisList = () => {
@@ -35,6 +38,7 @@ class EmojiGame extends Component {
   }
 
   updateScore = () => {
+<<<<<<< HEAD
     this.setState(prevState => ({
       score: prevState.score + 1,
     }))
@@ -50,6 +54,14 @@ class EmojiGame extends Component {
       win: false,
     })
   }
+=======
+    this.setState(prevState => ({score: prevState.clickedEmojisIdList.length}))
+  }
+
+  updateTopScore = score => this.setState({topScore: score})
+
+  resetScore = () => this.setState({score: 0})
+>>>>>>> c1d53d5d0a89806364ba999298080a557c429e3c
 
   updateClickedEmojisList = id => {
     this.setState(prevState => ({
@@ -58,11 +70,18 @@ class EmojiGame extends Component {
   }
 
   onClickFunction = id => {
+<<<<<<< HEAD
     const {clickedEmojisIdList, score} = this.state
     if (clickedEmojisIdList.includes(id) || score === 11) {
       this.setState({
         winning: false,
         win: score === 11,
+=======
+    const {clickedEmojisIdList} = this.state
+    if (clickedEmojisIdList.includes(id)) {
+      this.setState({
+        score: 0,
+>>>>>>> c1d53d5d0a89806364ba999298080a557c429e3c
       })
     } else {
       this.updateScore()
@@ -71,13 +90,22 @@ class EmojiGame extends Component {
   }
 
   render() {
+<<<<<<< HEAD
     const {score, topScore, winning, win} = this.state
+=======
+    const {score, topScore} = this.state
+>>>>>>> c1d53d5d0a89806364ba999298080a557c429e3c
     return (
       <div className="bg-container">
         <div className="inner-container">
           <div className="nav-bar-container">
+<<<<<<< HEAD
             <NavBar score={score} topScore={topScore} winning={winning} />
             {winning ? (
+=======
+            <NavBar score={score} topScore={topScore} />
+            {score < 12 ? (
+>>>>>>> c1d53d5d0a89806364ba999298080a557c429e3c
               <ul className="emoji-card-container">
                 {this.shuffledEmojisList().map(eachEmoji => (
                   <EmojiCard
@@ -90,8 +118,13 @@ class EmojiGame extends Component {
             ) : (
               <WinOrLoseCard
                 score={score}
+<<<<<<< HEAD
                 resetGame={this.resetGame}
                 win={win}
+=======
+                updateTopScore={this.updateTopScore}
+                resetScore={this.resetScore}
+>>>>>>> c1d53d5d0a89806364ba999298080a557c429e3c
               />
             )}
           </div>
